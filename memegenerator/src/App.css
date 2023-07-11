@@ -76,7 +76,11 @@ main {
   
 }
 
-
+.form-image{
+  width: 60%;
+  height: 480px;
+  display:inline-block;
+}
 
 
 
