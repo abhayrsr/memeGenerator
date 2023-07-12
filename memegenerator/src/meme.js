@@ -9,6 +9,10 @@ export default function Meme(){
     })
 
     const[allMemesImages, setAllMemesImages] = React.useState(memes)
+    function getText(){
+        
+    }
+
     function getMemeImage(){
         const memeArray = allMemesImages.data.memes
         const randomNumber = Math.floor(Math.random() * memeArray.length)
