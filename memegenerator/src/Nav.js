@@ -9,7 +9,7 @@ function Nav(){
 
             <img className = "trollFace" src = {trollFace} alt = "trollface"/>
             <h1>MemeGenerator</h1>
-            <h2 className = "nav-right">React Course - Project 3</h2>
+            <h2 className = "nav-right">React - Project 3</h2>
 
         </div>
     )
