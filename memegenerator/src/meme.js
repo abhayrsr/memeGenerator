@@ -27,21 +27,24 @@ export default function Meme(){
         
     }
 
-    // const[allMemesImages, setAllMemesImages] = React.useState(memes)
-    // function getText(){
-        
-    // }
+    var url = ""
 
     function getMemeImage(){
         const randomNumber = Math.floor(Math.random() * allMemes.length)
-        const url = allMemes[randomNumber].url
+        url = allMemes[randomNumber].url
         setMemeImg((prevMemeImg) => ({
            ...prevMemeImg, randomImage: url
-        }))
+        })
+    
+    )}
 
-    //    const downloadImage = () => {
-    //         saveAs('url', 'image.jpg') // Put your image url here.
-    //     }
+    const[imageUrl] = React.useState(url)
+
+    const handleDownloadClick = () => {
+            const link = document.createElement('a');
+            link.href = imageUrl;
+            link.download = '30b1gx.jpg'
+            link.click();
     }
 
 
@@ -77,9 +80,9 @@ export default function Meme(){
                    <h2 className = "meme--text bottom">{memeImg.bottomText}</h2>
                 </div>
 
-                {/* <div className = "download">
-                    <button onClick={getMemeImage.downloadImage}>Download</button>
-                </div> */}
+                <div className = "download">
+                    <button onClick={handleDownloadClick}>Download</button>
+                </div>
             </div>
         </main>
     )
